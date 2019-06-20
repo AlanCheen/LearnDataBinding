@@ -19,4 +19,12 @@ public class BasicDataBindingActivity extends AppCompatActivity {
 
         binding.setStudent(student);
     }
+
+//    public void getRootFromBinding() {
+//        BasicDatabindingBinding binding = BasicDatabindingBinding.inflate(getLayoutInflater());
+//        View root = binding.getRoot();
+//
+//        DataBindingUtil.inflate(getLayoutInflater(), R.layout.basic_databinding, viewGroup, false);
+//    }
+
 }
