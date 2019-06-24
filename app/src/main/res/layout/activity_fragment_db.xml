@@ -5,11 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentDBActivity">
+    tools:context=".infragment.FragmentDBActivity">
 
     <fragment
         android:id="@+id/fragment"
-        android:name="me.yifeiyuan.databinding.DBFragment"
+        android:name="me.yifeiyuan.databinding.infragment.DBFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />

@@ -2,21 +2,124 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+        <!--使用到了 View.VISIBLE 得导入一下-->
+        <import type="android.view.View"/>
+
         <variable
             name="student"
-            type="me.yifeiyuan.databinding.Student"/>
+            type="me.yifeiyuan.databinding.model.Student"/>
+
+        <variable
+            name="handler"
+            type="me.yifeiyuan.databinding.inactivity.EventHandler"/>
     </data>
 
-    <LinearLayout
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-        <TextView
+        android:padding="8dp">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="@{student.name}"
-            />
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@{`学生名字：`+student.name}"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="@{`学生年龄：`+student.age}"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="@{student.age&lt;18?@string/not_a_adult:@string/adult}"
+                    android:textColor="@{student.age&lt;=18?@color/colorAccent:@color/colorPrimary}"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@{`学生体重：`+student.weight}"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@{student.weight&lt;=75?`体重正常`:`体重不正常`}"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@{`性别男吗？：`+student.male}"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@{`学生毕业了吗？：`+student.gender}"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="有同桌喔！"
+                android:visibility="@{student.deskMate!=null?View.VISIBLE : View.GONE}"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:onClick="@{()->student.becomeOlder()}"
+                android:text="增加一岁"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:onClick="@{()->student.loseWeight()}"
+                android:text="减个肥吧"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:onClick="@{()->student.addWeight()}"
+                android:text="好饿，吃点东西"
+                />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:onClick="@{handler::onShowToast}"
+                android:text="点击弹个 Toast 好吗？"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:onClick="@{()->handler.onShowStudentName()}"
+                android:text="点击展示学生名字"
+                />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
 
 </layout>

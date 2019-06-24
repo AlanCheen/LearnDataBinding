@@ -9,11 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FragmentDBActivity">
+        <activity android:name=".expressions.ExpressionsActivity">
         </activity>
-        <activity android:name=".RecyclerViewActivity">
+        <activity android:name=".viewmodel.ViewModelActivity">
         </activity>
-        <activity android:name=".BasicDataBindingActivity">
+        <activity android:name=".infragment.FragmentDBActivity">
+        </activity>
+        <activity android:name=".recyclerview.RecyclerViewActivity">
+        </activity>
+        <activity android:name=".inactivity.BasicDataBindingActivity">
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

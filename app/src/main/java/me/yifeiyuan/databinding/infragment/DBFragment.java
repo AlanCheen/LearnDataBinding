@@ -1,4 +1,4 @@
-package me.yifeiyuan.databinding;
+package me.yifeiyuan.databinding.infragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,7 +7,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
+import me.yifeiyuan.databinding.R;
 import me.yifeiyuan.databinding.databinding.FragmentDbBinding;
+import me.yifeiyuan.databinding.model.Student;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -33,8 +35,8 @@ public class DBFragment extends Fragment {
             @Override
             public void onClick(final View v) {
                 student.age = student.age + 1;
-                //如果不重新设置的话 不会刷新，因为目前是单向的绑定
-                binding.setStudent(student);
+//                //如果不重新设置的话 不会刷新，因为目前是单向的绑定
+//                binding.setStudent(student);
             }
         });
 

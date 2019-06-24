@@ -7,7 +7,7 @@
 
         <variable
             name="student"
-            type="me.yifeiyuan.databinding.Student"
+            type="me.yifeiyuan.databinding.model.Student"
             />
 
     </data>
@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".DBFragment">
+        tools:context=".infragment.DBFragment">
 
         <TextView
             android:layout_width="match_parent"

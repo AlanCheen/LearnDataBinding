@@ -16,6 +16,10 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.yifeiyuan.databinding.inactivity.BasicDataBindingActivity;
+import me.yifeiyuan.databinding.infragment.FragmentDBActivity;
+import me.yifeiyuan.databinding.recyclerview.RecyclerViewActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -65,9 +69,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addTestCase(final List<TestItem> items) {
-        items.add(TestItem.create("Activity 基础运用", BasicDataBindingActivity.class));
-        items.add(TestItem.create("Fragment 基础运用", FragmentDBActivity.class));
-        items.add(TestItem.create("RecyclerView 基础运用", RecyclerViewActivity.class));
+        items.add(TestItem.create("在 Activity中使用 DataBinding，基础运用", BasicDataBindingActivity.class));
+        items.add(TestItem.create("在 Fragment DataBinding，基础运用", FragmentDBActivity.class));
+        items.add(TestItem.create("结合 RecyclerView 使用 DataBinding", RecyclerViewActivity.class));
     }
 
     private static class TestItem {

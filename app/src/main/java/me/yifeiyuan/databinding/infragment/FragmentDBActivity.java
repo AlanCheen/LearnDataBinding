@@ -1,7 +1,9 @@
-package me.yifeiyuan.databinding;
+package me.yifeiyuan.databinding.infragment;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import me.yifeiyuan.databinding.R;
 
 public class FragmentDBActivity extends AppCompatActivity {
 

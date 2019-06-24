@@ -1,4 +1,4 @@
-package me.yifeiyuan.databinding;
+package me.yifeiyuan.databinding.recyclerview;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.yifeiyuan.databinding.R;
+import me.yifeiyuan.databinding.model.Student;
 import me.yifeiyuan.databinding.databinding.RvItemBinding;
 
 public class RecyclerViewActivity extends AppCompatActivity {
